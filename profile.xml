@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<providers>
+  <provider>
+    <id>XXXXX</id>
+    <resourceName>WikiPathways</resourceName>
+    <description>WikiPathways is a database of biological pathways maintained by and for the scientific community.</description>
+    <email>wikipathways-discuss@googlegroups.com</email>
+  </provider>
+</providers>
