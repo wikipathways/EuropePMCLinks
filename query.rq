@@ -1,0 +1,9 @@
+SELECT DISTINCT (STR(?pmidLit) AS ?pmid)
+                (GROUP_CONCAT(DISTINCT ?wpid; separator=";")) AS ?wpids
+WHERE {
+  ?pubmed a       wp:PublicationReference ;
+          gpml:id ?pmidLit ;
+          dcterms:isPartOf ?pathway .
+  ?pathway dcterms:identifier ?wpid .
+} GROUP BY ?pmidLit
+  ORDER BY ?pmidLit
