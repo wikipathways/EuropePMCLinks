@@ -14,3 +14,16 @@ collections:
 ```shell
 curl -H "Accept: text/csv" --data-urlencode query@query.rq -G http://sparql.wikipathways.org/ -o pmid2wpid.csv
 ```
+
+Step 2 is the generation of the links XML (using Groovy and Java8):
+
+```shell
+groovy makeLinkXML.groovy > links.xml
+```
+
+Step 3 is the validation of the links XML:
+
+```shell
+curl http://europepmc.org/docs/labslink.xsd -o labslink.xsd
+xmllint --noout --schema labslink.xsd links.xml
+```
