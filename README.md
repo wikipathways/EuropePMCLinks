@@ -27,3 +27,21 @@ Step 3 is the validation of the links XML:
 curl http://europepmc.org/docs/labslink.xsd -o labslink.xsd
 xmllint --noout --schema labslink.xsd links.xml
 ```
+
+## Example output
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<links>
+  <link providerId="-1">
+    <resource>
+      <title>DAP12 interactions (Homo sapiens)</title>
+      <url>https://www.wikipathways.org/instance/WP2694</url>
+    </resource>
+    <record>
+      <source>MED</source>
+      <id>10021361</id>
+    </record>
+  </link>
+</links>
+```
