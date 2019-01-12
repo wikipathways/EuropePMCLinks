@@ -1,6 +1,6 @@
 // Copyright (c) 2019  Egon Willighagen <egon.willighagen@gmail.com>
 //
-// GPL v3
+// MIT License
 
 providerID = "-1"
 
