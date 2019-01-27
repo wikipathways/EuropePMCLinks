@@ -29,7 +29,7 @@ curl http://europepmc.org/docs/labslink.xsd -o labslink.xsd
 xmllint --noout --schema labslink.xsd links.xml
 ```
 
-## Example output
+### Example output
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -38,7 +38,7 @@ xmllint --noout --schema labslink.xsd links.xml
     <resource>
       <title>DAP12 interactions (Homo sapiens)</title>
       <url>https://www.wikipathways.org/instance/WP2694</url>
-      <image>https://www.wikipathways.org//wpi/wpi.php?action=downloadFile&type=png&pwTitle=Pathway:WP2694</image>
+      <image>https://www.wikipathways.org//wpi/wpi.php?action=downloadFile&amp;type=png&amp;pwTitle=Pathway:WP2694</image>
     </resource>
     <record>
       <source>MED</source>
@@ -46,4 +46,14 @@ xmllint --noout --schema labslink.xsd links.xml
     </record>
   </link>
 </links>
+```
+
+## Upload to EuropePMC
+
+The `links.xml` file is finally uploaded to EuropePMC's FTP server. The credentials are available with the current
+uploader. The file is placed in a hidden folder.
+
+```shell
+ncftp -u <secretuser> -p <password> something.ebi.ac.uk
+cd <hiddenFolder>
 ```
