@@ -2,7 +2,14 @@
 //
 // MIT License
 
-providerID = "-1"
+def providerID = null
+
+if (args.length < 1) {
+  println "groovy makeLinkXML.groovy <providerID>"
+  System.exit(0)
+} else {
+  providerID = args[0]
+}
 
 println "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
 println "<links>"

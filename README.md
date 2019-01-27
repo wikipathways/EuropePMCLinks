@@ -15,10 +15,11 @@ collections:
 curl -H "Accept: text/csv" --data-urlencode query@query.rq -G http://sparql.wikipathways.org/ -o pmid2wpid.csv
 ```
 
-Step 2 is the generation of the links XML (using Groovy and Java8):
+Step 2 is the generation of the links XML (using Groovy and Java8), which requires passing the provider ID
+as allocated by EuropePMC:
 
 ```shell
-groovy makeLinkXML.groovy > links.xml
+groovy makeLinkXML.groovy <providerID> > links.xml
 ```
 
 Step 3 is the validation of the links XML:
