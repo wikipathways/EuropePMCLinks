@@ -38,6 +38,7 @@ xmllint --noout --schema labslink.xsd links.xml
     <resource>
       <title>DAP12 interactions (Homo sapiens)</title>
       <url>https://www.wikipathways.org/instance/WP2694</url>
+      <image>https://www.wikipathways.org//wpi/wpi.php?action=downloadFile&type=png&pwTitle=Pathway:WP2694</image>
     </resource>
     <record>
       <source>MED</source>
