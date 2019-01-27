@@ -9,5 +9,5 @@ WHERE {
            wp:organismName ?speciesLabelLit ;
            dc:title ?titleLit .
 }
-ORDER BY ?pmid
+ORDER BY ?pmid ?wpid
 
