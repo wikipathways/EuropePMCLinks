@@ -50,7 +50,7 @@ xmllint --noout --schema labslink.xsd links.xml
 
 ## Upload to EuropePMC
 
-The `links.xml` file is finally uploaded to EuropePMC's FTP server. The credentials are available with the current
+Finally, the `links.xml` and `profile.xml` files are uploaded to EuropePMC's FTP server. The credentials are available with the current
 uploader. The file is placed in a hidden folder.
 
 ```shell
