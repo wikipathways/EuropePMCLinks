@@ -1,16 +1,12 @@
-PREFIX cur: <http://vocabularies.wikipathways.org/wp#Curation:>
-
-SELECT DISTINCT (STR(?pmidLit) AS ?pmid)
+SELECT DISTINCT ?id
                 (STR(?wpidLit) AS ?wpid)
                 (CONCAT(STR(?titleLit), " (", STR(?speciesLabelLit), ")") AS ?title)
 WHERE {    
-  ?pubmed a       wp:PublicationReference ;
-          gpml:id ?pmidLit ;
-          dcterms:isPartOf ?pathway .
+  ?reference a wp:PublicationReference ;
+    gpml:id ?id ; gpml:database "Pubmed" ;
+    dcterms:isPartOf* ?pathway .
   ?pathway dcterms:identifier ?wpidLit ;
-           wp:organismName ?speciesLabelLit ;
-           dc:title ?titleLit .
-  MINUS { ?pathway wp:ontologyTag cur:Reactome_Approved }
+    wp:organismName ?speciesLabelLit ;
+    dc:title ?titleLit .
 }
 ORDER BY ?pmid ?wpid
-
