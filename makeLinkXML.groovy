@@ -24,7 +24,7 @@ lines.each { String line ->
   println "    <resource>"
   println "      <title>${name}</title>"
   println "      <url>https://www.wikipathways.org/instance/${wpid}</url>"
-  println "      <image>https://www.wikipathways.org/img_auth.php/0/0c/Wikipathways_logo_64.png</image>"
+  println "      <image>https://upload.wikimedia.org/wikipedia/commons/3/34/Wplogo_500.png</image>"
   println "    </resource>"
   println "    <record>"
   println "      <source>MED</source>"
