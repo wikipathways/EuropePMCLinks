@@ -12,7 +12,7 @@ Step 1 is the listing of all PubMed identifiers and associated pathways from the
 collections:
 
 ```shell
-curl -H "Accept: text/csv" --data-urlencode query@query.rq -G http://sparql.wikipathways.org/ -o pmid2wpid.csv
+curl -H "Accept: text/csv" --data-urlencode query@query.rq -G https://sparql.wikipathways.org/sparql -o pmid2wpid.csv
 ```
 
 Step 2 is the generation of the links XML (using Groovy and Java8), which requires passing the provider ID
@@ -25,7 +25,7 @@ groovy makeLinkXML.groovy <providerID> > links.xml
 Step 3 is the validation of the links XML:
 
 ```shell
-curl http://europepmc.org/docs/labslink.xsd -o labslink.xsd
+curl https://europepmc.org/docs/labslink.xsd -o labslink.xsd
 xmllint --noout --schema labslink.xsd links.xml
 ```
 
